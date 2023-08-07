@@ -90,13 +90,13 @@ body {
     cursor: pointer;
   }
 
-  .video-container {
+  video-container {
     position:relative;
     height:0;
     padding-bottom:56.25%;
   }
   
-  .video-container iframe {
+  video-container iframe {
     position:absolute;
     top:0;
     left:0;
@@ -168,13 +168,13 @@ body {
       gap: 0.5rem;
     }
 
-    .video-container {
+    video-container {
       position:relative;
       height:0;
       padding-bottom:56.25%;
     }
     
-    .video-container iframe {
+    video-container iframe {
       position:absolute;
       top:0;
       left:0;
