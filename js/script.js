@@ -2,11 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewsSection = document.getElementById("reviewsSection");
     const newReviewForm = document.getElementById("newReviewForm");
   
-    // Function to generate review cards
     function generateReviewCards() {
-      reviewsSection.innerHTML = ""; // Clear the existing review cards
+      reviewsSection.innerHTML = "";
   
-      // Loop through review data and create a card for each review
       window.reviewData.forEach((review) => {
         const card = document.createElement("div");
         card.classList.add("reviewCard");
@@ -31,17 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   
-    // Function to handle new review form submission
     newReviewForm.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent form submission
+      e.preventDefault(); 
   
-      // Get form values
+   
       const nameInput = document.getElementById("name");
       const dateInput = document.getElementById("date");
       const ratingInput = document.getElementById("rating");
       const reviewTextInput = document.getElementById("reviewText");
   
-      // Create a new review object
       const newReview = {
         name: nameInput.value,
         date: dateInput.value,
@@ -49,19 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
         reviewText: reviewTextInput.value,
       };
   
-      // Add the new review to the reviewData array
       window.reviewData.push(newReview);
   
-      // Clear the form fields
       nameInput.value = "";
       dateInput.value = "";
       ratingInput.value = "";
       reviewTextInput.value = "";
   
-      // Regenerate the review cards with the new review added
       generateReviewCards();
     });
   
-    // Generate initial review cards on page load
     generateReviewCards();
   });
